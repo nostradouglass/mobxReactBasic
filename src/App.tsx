@@ -1,23 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { TodoList } from "./TodoList/TodoList";
+import { TodoStore } from "./TodoList/TodoStore";
+import { CreateUser } from "./User/CreateUser";
+import { ListUsers } from "./User/ListUsers";
+import { UserStore } from "./User/UserStore";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h3>Test</h3>
+        <TodoList todoStore={TodoStore} />
+        <br />
+        <CreateUser userStore={UserStore} />
+        <ListUsers userStore={UserStore} />
       </header>
     </div>
   );
